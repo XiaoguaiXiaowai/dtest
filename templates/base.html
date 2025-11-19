@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Blank Page</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  {% include 'link_css.html' %}
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <!-- Site wrapper -->
+  <div class="wrapper">
+
+    {% include 'main-header.html' %}
+
+    <!-- =============================================== -->
+
+    <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar">
+      {% include 'main-sidebar.html' %}
+    </aside>
+
+    <!-- =============================================== -->
+
+    <!-- Content Wrapper. Contains page content -->
+    {% block content %}
+    {% endblock %}
+    <!-- /.content-wrapper -->
+
+    {% include 'main-footer.html' %}
+
+    <!-- Control Sidebar -->
+    {% include 'control-sidebar.html' %}
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+
+  {% include 'script.html' %}
+</body>
+</html>
