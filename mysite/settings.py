@@ -132,4 +132,12 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Authentication redirects
+# 未登录访问受保护视图时的登录页面地址
+LOGIN_URL = '/login/'
+# 登录成功后的默认跳转地址
+LOGIN_REDIRECT_URL = '/'
+# 退出登录后的跳转地址
+LOGOUT_REDIRECT_URL = '/login/'
+
 

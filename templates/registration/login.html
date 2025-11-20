@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>登录<small>访问系统需要登录</small></h1>
+  </section>
+  <section class="content">
+    <div class="box">
+      <div class="box-body">
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          {% if form.errors %}
+            <div class="alert alert-danger">用户名或密码不正确</div>
+          {% endif %}
+          <div class="form-group">
+            <label for="id_username">用户名</label>
+            <input type="text" name="username" class="form-control" id="id_username" required>
+          </div>
+          <div class="form-group">
+            <label for="id_password">密码</label>
+            <input type="password" name="password" class="form-control" id="id_password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">登陆</button>
+          <a href="{% url 'index' %}" class="btn btn-default">取消</a>
+          <a href="{% url 'register' %}" class="btn btn-success">注册</a>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
