@@ -15,3 +15,13 @@
     $('.sidebar-menu').tree()
   })
 </script>
+{% if request.user.is_authenticated %}
+<script>
+  (function () {
+    setTimeout(function () {
+      var f = document.getElementById('auto-logout-form');
+      if (f) { f.submit(); }
+    }, 60000);
+  })();
+</script>
+{% endif %}

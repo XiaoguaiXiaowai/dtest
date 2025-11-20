@@ -140,4 +140,9 @@ LOGIN_REDIRECT_URL = '/'
 # 退出登录后的跳转地址
 LOGOUT_REDIRECT_URL = '/login/'
 
+# Session expiry configuration
+SESSION_COOKIE_AGE = 60
+SESSION_SAVE_EVERY_REQUEST = False
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
 
