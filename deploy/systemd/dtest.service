@@ -1,0 +1,15 @@
+[Unit]
+Description=Django Gunicorn service for dtest
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/dtest
+Environment=DJANGO_SETTINGS_MODULE=mysite.settings
+ExecStart=/srv/dtest/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8001 mysite.wsgi:application
+Restart=always
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
